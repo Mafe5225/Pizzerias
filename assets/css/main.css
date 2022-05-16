@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;1,700&family=Merriweather:ital@1&display=swap');
+
+html {
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background: #E8CBC0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #636FA4, #E8CBC0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #636FA4, #E8CBC0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+}
+
+
+td {
+    display: block;
+}
+
+th {
+    display: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.content {
+    max-width: 960px;
+    width: 100%;
+    height: 80vh;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow-y: scroll;
+    padding: 2rem;
+    position: relative;
+}
+
+.actions {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.close {
+    width: 3rem;
+    height: 3rem;
+    color: #fff;
+    background: #E8CBC0;
+    background: -webkit-linear-gradient(to right, #636FA4, #E8CBC0);
+    background: linear-gradient(to right, #636FA4, #E8CBC0);
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgb(0, 0, 0, 0.25);
+}
+
+.close:hover {
+    opacity: 0.8;
+}
+
+.titulo-item {
+    color: #636FA4;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-color: #636FA4;
+    padding-bottom: 1rem;
+}
+
+.posicion {
+    background-color: #636FA4;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-right: 1rem;
+}
+
+.direccion {
+    font-weight: bold;
+    color: #636FA4;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.fa-star, .fa-star-half {
+    color: rgb(236, 236, 53);
+}
+td:nth-of-type(1){
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #636FA4;
+}
+
+tr:nth-child(even){
+    background-color: #f3E5F5;
+}
+
+
+/* ANIMACIONES EN CSSKC
+
+.content {
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    75% {
+        margin-left: 20%;
+        width: 150%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+    
+} */
+
+
+@media (min-height: 550px) {
+    .content {
+        height: 500px;
+    }
+}
+
+@media (min-width: 900px) {
+    th {
+        display: table-cell;
+    }
+    td {
+        display: table-cell;
+    }
+    .content {
+        overflow-y: auto;
+    }   
+    td:nth-of-type(1){
+        font-size: 1rem;
+        font-weight: normal;
+        color: #000;
+    }
+    
+}
